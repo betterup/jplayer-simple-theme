@@ -1,0 +1,25 @@
+{
+  "name": "jplayer-simple-theme",
+  "version": "0.1.0",
+  "authors": [
+    "Ryan Sonnek <ryan@codecrate.com>"
+  ],
+  "description": "jPlayer theme with clean UI and simple controls",
+  "main": "src/script.js",
+  "keywords": [
+    "jquery",
+    "jplayer"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/betterup/jplayer-simple-theme",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jplayer": "~2.9.2"
+  }
+}

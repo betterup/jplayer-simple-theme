@@ -1,0 +1,100 @@
+$color-highlight: #1fc2bd;
+$color-background: #52d3cb;
+$color-progress: #1fc2bd;
+$color-text: #fff;
+$color-text-muted: #7d7a77;
+
+.jp-audio {
+  border: 0;
+  color: $color-text;
+  font-family: 'Source Sans Pro',sans-serif;
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-align: left;
+  -webkit-touch-callout: none;
+  user-select: none;
+  width: 100%;
+
+  // hide volume buttons on mobile
+  &.jp-state-no-volume .jp-volume-controls {
+    display: none;
+  }
+
+  // toggle visibility of mute/volume buttons
+  &.jp-state-muted .jp-controls a {
+    &.jp-volume-max {
+      display: inline-block !important;
+    }
+
+    &.jp-mute {
+      display: none;
+    }
+  }
+
+  .jp-controls {
+    table-layout: fixed;
+    width: 100%;
+    font-size: 34px;
+    margin: 5px 0 0;
+
+    // hide volume button until muted
+    .jp-volume-max {
+      display: none !important;
+    }
+
+    .jp-pause,.jp-play {
+      background-color: darken($color-background, 20%);
+    }
+
+    a {
+      background-color: $color-background;
+      color: $color-text;
+      display: inline-block;
+      line-height: 90px;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+
+      &:hover {
+        color: $color-highlight;
+      }
+    }
+  }
+
+  .jp-progress {
+    background-color: lighten($color-text-muted, 20%);
+    height: 10px;
+    margin-top: 10px;
+
+    .jp-seek-bar {
+      cursor: pointer;
+      height: 100%;
+    }
+
+    .jp-play-bar {
+      background-color: $color-progress;
+      height: 100%;
+      width: 0;
+    }
+  }
+
+  .timekeeper {
+    color: $color-text-muted;
+    font-size: 11px;
+    text-align: right;
+  }
+
+  .jp-no-solution {
+    background-color: #b28282;
+    color: $color-background;
+    display: none;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 0;
+    text-align: center;
+  }
+}
