@@ -35,6 +35,13 @@ $color-text-muted: #7d7a77;
     }
   }
 
+  // toggle visibility of pause buttons when playing
+  &.jp-state-playing .jp-controls a {
+    &.jp-pause {
+      display: inline-block !important;
+    }
+  }
+
   .jp-controls {
     table-layout: fixed;
     width: 100%;
